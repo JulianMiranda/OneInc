@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "oneincapp": {
+      "hosting": {
+        "tracksPaymentsApp": [
+          "oneincapp"
+        ]
+      }
+    }
+  }
+}
