@@ -19,16 +19,13 @@
         <a
           class="nav-link"
           id="UserDropdown"
-          href="#"
+          routerLink="/stadistics"
           data-toggle="dropdown"
           aria-expanded="false"
         >
-          <span class="profile-text">Hello, Richard V.Welsh !</span>
-          <img
-            class="img-xs rounded-circle"
-            src="assets/images/faces/face1.jpg"
-            alt="Profile image"
-          />
+          <span class="profile-text"
+            >Total amount {{ totalPayments | currency }}</span
+          >
         </a>
       </li>
     </ul>

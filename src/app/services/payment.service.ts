@@ -36,6 +36,10 @@ export class PaymentService {
         })
       );
   }
+  /* editPayment(uidItem: string) {
+    const uid = this.authService.user.uid;
+    return this.firestore.doc(`${uid}/payments/items/${uidItem}`).update()
+  } */
   deletePayment(uidItem: string) {
     const uid = this.authService.user.uid;
     return this.firestore.doc(`${uid}/payments/items/${uidItem}`).delete();
