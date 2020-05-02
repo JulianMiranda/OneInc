@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Payment } from 'src/app/models/payment.model';
 import { AppState } from 'src/app/app.reducer';
+import { AppStateWithPayment } from '../payments/payments.reducer';
 
 @Component({
   selector: 'app-stadistic',
@@ -12,7 +13,7 @@ export class StadisticComponent implements OnInit {
   payments = 0;
   totalPayments = 0;
 
-  constructor(private store: Store<AppState>) {}
+  constructor(private store: Store<AppStateWithPayment>) {}
 
   ngOnInit(): void {
     this.store

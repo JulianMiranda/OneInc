@@ -11,9 +11,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   {
     path: '',
-    component: DashboardComponent,
-    children: dashboardRoutes,
-    canActivate: [AuthGuard],
+    canLoad: [AuthGuard],
+    loadChildren: () =>
+      import('./tracksPayment/payment.module').then((m) => m.PaymentModule),
   },
   { path: '**', redirectTo: '' },
 ];

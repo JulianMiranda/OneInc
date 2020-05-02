@@ -6,10 +6,8 @@ import * as payment from './tracksPayment/payments/payments.reducer';
 export interface AppState {
   ui: ui.State;
   user: auth.State;
-  payments: payment.State;
 }
 export const appReducers: ActionReducerMap<AppState> = {
   ui: ui.UiReducer,
   user: auth.AuthReducer,
-  payments: payment.PaymentsReducer,
 };

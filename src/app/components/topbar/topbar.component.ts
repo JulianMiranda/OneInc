@@ -4,8 +4,8 @@ import { Subscription } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { AppState } from '../../app.reducer';
 import { Payment } from '../../models/payment.model';
+import { AppStateWithPayment } from 'src/app/tracksPayment/payments/payments.reducer';
 
 @Component({
   selector: 'app-topbar',
@@ -17,7 +17,7 @@ export class TopbarComponent implements OnInit, OnDestroy {
   totalPayments = 0;
 
   paymentSubs: Subscription;
-  constructor(private store: Store<AppState>) {}
+  constructor(private store: Store<AppStateWithPayment>) {}
 
   ngOnInit(): void {
     this.paymentSubs = this.store
