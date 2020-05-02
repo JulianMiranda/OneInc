@@ -24,13 +24,10 @@ import { PaymentModule } from './tracksPayment/payment.module';
   imports: [
     BrowserModule,
     AuthModule,
-
     AppRoutingModule,
-
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
