@@ -15,6 +15,7 @@ export class PaymentService {
   ) {}
   createPayment(payment: Payment) {
     const uid = this.authService.user.uid;
+    delete payment.uid;
     return this.firestore
       .doc(`${uid}/payments`)
       .collection('items')
@@ -34,5 +35,9 @@ export class PaymentService {
           });
         })
       );
+  }
+  deletePayment(uidItem: string) {
+    const uid = this.authService.user.uid;
+    return this.firestore.doc(`${uid}/payments/items/${uidItem}`).delete();
   }
 }

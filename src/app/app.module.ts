@@ -11,7 +11,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { appReducers } from './app.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
-
+import { ChartsModule } from 'ng2-charts';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ import { PaymentsComponent } from './tracksPayment/payments/payments.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    ChartsModule,
     StoreModule.forRoot(appReducers),
     StoreDevtoolsModule.instrument({
       maxAge: 25,

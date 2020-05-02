@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
 import { AppState } from '../app.reducer';
 import * as authActions from '../auth/auth.actions';
 import { Subscription } from 'rxjs';
+import * as paymentActions from '../tracksPayment/payments/payments.actions';
 
 @Injectable({
   providedIn: 'root',
@@ -40,6 +41,7 @@ export class AuthService {
         this.userP = null;
         this.userSubscription.unsubscribe();
         this.store.dispatch(authActions.unSetUser());
+        this.store.dispatch(paymentActions.unSetItems());
       }
     });
   }
