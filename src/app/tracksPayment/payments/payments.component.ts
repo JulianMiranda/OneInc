@@ -50,7 +50,7 @@ export class PaymentsComponent implements OnInit, OnDestroy {
       .then(() => {
         this.paymentForm.reset();
         this.store.dispatch(ui.stopLoading());
-        Swal.fire('Created register!', description, 'success');
+        Swal.fire('Payment Added!', description, 'success');
       })
       .catch((err) => {
         Swal.fire('Error!', err.message, 'error');

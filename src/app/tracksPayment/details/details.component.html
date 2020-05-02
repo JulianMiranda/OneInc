@@ -26,7 +26,11 @@
               <th>{{ item.description }}</th>
               <th>{{ item.amount | currency }}</th>
               <td>
-                <button type="button" class="btn btn-outline-success">
+                <button
+                  [routerLink]="['/stadistics', item.uid]"
+                  type="button"
+                  class="btn btn-outline-success"
+                >
                   <i class="fa fa-edit"></i>
                   Edit
                 </button>

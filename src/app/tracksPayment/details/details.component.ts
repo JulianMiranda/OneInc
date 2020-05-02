@@ -33,24 +33,4 @@ export class DetailsComponent implements OnInit, OnDestroy {
       .then(() => Swal.fire('Deleted!', 'Item deleted', 'success'))
       .catch((err) => Swal.fire('Error!', err.message, 'error'));
   }
-  /* edit(payment: Payment) {
-    if (this.paymentForm.invalid) {
-      return;
-    }
-    this.store.dispatch(ui.isLoading());
-
-    const { description, amount } = this.paymentForm.value;
-    const payment = new Payment(description, amount);
-    this.paymentService
-      .createPayment(payment)
-      .then(() => {
-        this.paymentForm.reset();
-        this.store.dispatch(ui.stopLoading());
-        Swal.fire('Created register!', description, 'success');
-      })
-      .catch((err) => {
-        Swal.fire('Error!', err.message, 'error');
-        this.store.dispatch(ui.isLoading());
-      });
-  } */
 }

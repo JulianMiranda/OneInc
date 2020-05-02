@@ -6,5 +6,5 @@ import { PaymentsComponent } from '../../tracksPayment/payments/payments.compone
 export const dashboardRoutes: Routes = [
   { path: '', component: DetailsComponent },
   { path: 'payment', component: PaymentsComponent },
-  { path: 'stadistics', component: StadisticComponent },
+  { path: 'stadistics/:id', component: StadisticComponent },
 ];

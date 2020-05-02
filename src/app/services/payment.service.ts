@@ -36,10 +36,13 @@ export class PaymentService {
         })
       );
   }
-  /* editPayment(uidItem: string) {
+  editPayment(payment: Payment, uidItem: string) {
     const uid = this.authService.user.uid;
-    return this.firestore.doc(`${uid}/payments/items/${uidItem}`).update()
-  } */
+    delete payment.uid;
+    return this.firestore
+      .doc(`${uid}/payments/items/${uidItem}`)
+      .update({ ...payment });
+  }
   deletePayment(uidItem: string) {
     const uid = this.authService.user.uid;
     return this.firestore.doc(`${uid}/payments/items/${uidItem}`).delete();
