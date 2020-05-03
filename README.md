@@ -6,22 +6,48 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Node
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Node installation on Windows
+Just go on official Node.js website and download the installer.
 
-## Build
+Node installation on Windows
+Just go on official Node.js website and download the installer.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Also, be sure to have git available in your PATH, npm might need it (You can find git here).
 
-## Running unit tests
+Node installation on Ubuntu
+You can install nodejs and npm easily with apt install, just run the following commands.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+\$ sudo apt install nodejs
 
-## Running end-to-end tests
+\$ sudo apt install npm
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Other Operating Systems
+You can find more information about the installation on the official Node.js website and the official NPM website.
 
-## Further help
+If the installation was successful, you should be able to run the following command.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+\$ node --version
+
+v8.11.3
+
+\$ npm --version
+
+6.1.0
+
+If you need to update npm, you can make it using npm! Cool right? After running the following command, just open again the command line and be happy.
+
+\$ npm install npm -g
+
+## Install
+
+\$ git clone https://github.com/JulianMiranda/stack-builders-test.git
+
+\$ cd stack-builders-test
+
+\$ npm install
+
+## Running the project
+
+\$ npm start
