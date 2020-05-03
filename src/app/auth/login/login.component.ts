@@ -48,8 +48,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.authService
       .loginUser(email, password)
       .then((credentials) => {
-        console.log(credentials);
-        /* Swal.close(); */
         this.store.dispatch(ui.stopLoading());
         this.router.navigate(['/']);
       })

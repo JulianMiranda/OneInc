@@ -1,11 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-  AbstractControl,
-} from '@angular/forms';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { Payment } from '../../models/payment.model';
 import { PaymentService } from '../../services/payment.service';
 import Swal from 'sweetalert2';
@@ -30,8 +24,6 @@ export class PaymentsComponent implements OnInit, OnDestroy {
   substracDays = new Date();
   minDate: any;
   maxDate: any;
-
-  other = new Date();
 
   createFormGroup() {
     return new FormGroup({
@@ -62,17 +54,16 @@ export class PaymentsComponent implements OnInit, OnDestroy {
     this.loadingSubs = this.store
       .select('ui')
       .subscribe(({ isLoading }) => (this.loading = isLoading));
-
     this.substracDays.setDate(this.today.getDate() - 6);
 
     this.maxDate = {
       year: this.today.getFullYear(),
-      month: this.today.getMonth(),
+      month: this.today.getMonth() + 1,
       day: this.today.getDate(),
     };
     this.minDate = {
       year: this.substracDays.getFullYear(),
-      month: this.substracDays.getMonth(),
+      month: this.substracDays.getMonth() + 1,
       day: this.substracDays.getDate(),
     };
   }

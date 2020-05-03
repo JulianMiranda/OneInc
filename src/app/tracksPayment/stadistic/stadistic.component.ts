@@ -83,7 +83,6 @@ export class StadisticComponent implements OnInit, OnDestroy {
           }
         });
       });
-    console.log(this.firstDate);
 
     this.substracDays.setDate(this.today.getDate() - 6);
 
