@@ -2,18 +2,17 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Payment } from '../models/payment.model';
 
 @Pipe({
-  name: 'ordenIngreso',
+  name: 'datePipe',
 })
 export class PaymentPipe implements PipeTransform {
-  transform(items: Payment[]): Payment[] {
-    return items;
+  transform(item: []): string {
+    const a = Object.values(item);
+    const year = a[0];
+    const month = a[1];
+    const day = a[2];
 
-    /*  return items.sort( (a, b) => {
+    const date = new Date(year, month, day).toDateString();
 
-      if ( a.tipo === 'ingreso' ) {
-        return -1;
-      } else {
-        return 1;
-      } */
+    return date;
   }
 }

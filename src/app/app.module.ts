@@ -21,7 +21,7 @@ import { PaymentModule } from './tracksPayment/payment.module';
 import { PaymentPipe } from './pipes/payment.pipe';
 
 @NgModule({
-  declarations: [AppComponent, PaymentPipe],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AuthModule,

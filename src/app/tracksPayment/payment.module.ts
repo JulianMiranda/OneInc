@@ -12,6 +12,7 @@ import { StoreModule } from '@ngrx/store';
 import { PaymentsReducer } from './payments/payments.reducer';
 import { FormsModule } from '@angular/forms';
 import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { PaymentPipe } from '../pipes/payment.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
     DetailsComponent,
     StadisticComponent,
     PaymentsComponent,
+    PaymentPipe,
   ],
   imports: [
     CommonModule,
