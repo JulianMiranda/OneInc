@@ -14,6 +14,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import * as ui from '../../components/ui.actions';
 import Swal from 'sweetalert2';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-stadistic',
@@ -31,6 +32,14 @@ export class StadisticComponent implements OnInit, OnDestroy {
   firstAmount: number;
   firstDate: Date;
 
+  model: NgbDateStruct;
+
+  today = new Date();
+  substracDays = new Date();
+  minDate: any;
+  maxDate: any;
+
+  other = new Date();
   createFormGroup() {
     return new FormGroup({
       description: new FormControl('', [Validators.maxLength(255)]),
@@ -74,11 +83,24 @@ export class StadisticComponent implements OnInit, OnDestroy {
           }
         });
       });
+    console.log(this.firstDate);
 
+    this.substracDays.setDate(this.today.getDate() - 6);
+
+    this.maxDate = {
+      year: this.today.getFullYear(),
+      month: this.today.getMonth(),
+      day: this.today.getDate(),
+    };
+    this.minDate = {
+      year: this.substracDays.getFullYear(),
+      month: this.substracDays.getMonth(),
+      day: this.substracDays.getDate(),
+    };
     this.paymentForm = this.fb.group({
       description: this.firstDesc,
       amount: this.firstAmount,
-      date: this.firstDate,
+      date: JSON.stringify(this.firstDate),
     });
   }
 
