@@ -36,6 +36,10 @@ export class PaymentService {
         })
       );
   }
+  get(uidItem: string) {
+    const uid = this.authService.user.uid;
+    return this.firestore.doc(`${uid}/payments/items/${uidItem}`).get();
+  }
   editPayment(payment: Payment, uidItem: string) {
     const uid = this.authService.user.uid;
     delete payment.uid;

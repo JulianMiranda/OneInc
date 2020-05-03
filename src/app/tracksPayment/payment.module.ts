@@ -10,6 +10,8 @@ import { SharedModule } from '../components/shared.module';
 import { DashboardRoutesModule } from '../components/dashboard/dashboard-routes.module';
 import { StoreModule } from '@ngrx/store';
 import { PaymentsReducer } from './payments/payments.reducer';
+import { FormsModule } from '@angular/forms';
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PaymentsReducer } from './payments/payments.reducer';
     ChartsModule,
     SharedModule,
     DashboardRoutesModule,
+    FormsModule,
+    NgbDatepickerModule,
   ],
 })
 export class PaymentModule {}

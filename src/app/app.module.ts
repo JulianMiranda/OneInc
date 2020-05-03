@@ -18,9 +18,10 @@ import { AppComponent } from './app.component';
 
 import { AuthModule } from './auth/auth.module';
 import { PaymentModule } from './tracksPayment/payment.module';
+import { PaymentPipe } from './pipes/payment.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PaymentPipe],
   imports: [
     BrowserModule,
     AuthModule,

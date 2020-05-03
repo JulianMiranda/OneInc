@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 })
 export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;
-  loading: boolean = false;
+  loading = false;
   uiSubscription: Subscription;
 
   constructor(
@@ -43,13 +43,6 @@ export class LoginComponent implements OnInit, OnDestroy {
       return;
     }
     this.store.dispatch(ui.isLoading());
-    /* Swal.fire({
-      title: 'Loading!',
-
-      onBeforeOpen: () => {
-        Swal.showLoading();
-      },
-    }); */
 
     const { name, email, password } = this.loginForm.value;
     this.authService
